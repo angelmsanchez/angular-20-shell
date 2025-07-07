@@ -3,6 +3,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "auth": [
+        "./dist/auth"
+      ]
+    },
     "esModuleInterop": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -30,6 +35,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/auth/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/auth/tsconfig.spec.json"
     }
   ]
 }

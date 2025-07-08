@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { AuthService } from 'auth';
-// import { Lib1Service } from 'projects/lib1/src/public-api';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +15,8 @@ export class App implements OnInit {
 
   ngOnInit(): void {
     console.log('ngOninit SHELL: ', this.authService.userName);
+    fromEvent(window, 'event').subscribe((event) => {
+      console.log('ngOninit ', event);
+    });
   }
 }
